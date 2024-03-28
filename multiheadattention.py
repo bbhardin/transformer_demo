@@ -1,3 +1,8 @@
+from tensorflow import math, matmul, reshape, shape, transpose, cast, float32
+from tensorflow.keras.layers import Dense, Layer
+from keras.backend import softmax
+from dotproductattention import DotProductAttention
+
 class MultiHeadAttention(Layer):
     def __init__(self, h, d_k, d_v, d_model, **kwargs):
         super(MultiHeadAttention, self).__init__(**kwargs)
